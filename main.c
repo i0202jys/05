@@ -1,17 +1,31 @@
 #include <stdio.h>
 int main() {
 
-    int n;
-    int sum=0;
-    int i;
+    int n1, n2;
+    char op;
+    int result;
 
-    printf("input number: ");
-    scanf("%i", &n);
+    printf("input the calculation: ");
+    scanf("%i%c%i", &n1, &op, &n2);
 
-    for(i=0; i<n; i++) {
-        sum =sum + i + 1;
-    }
-printf("Sum of digits: %d\n", sum);
+     if(op =='+')
+        result = n1 + n2;
+    else if(op == '-')
+    
+        result = n1 - n2; 
+
+    else if(op == '*')
+  
+        result = n1 * n2;
+   
+    else if(op == '/')
+    
+        result = n1 / n2;
+else
+        printf("error\n");
+
+
+    printf("= %i\n", result);
 
     return 0;
 }
