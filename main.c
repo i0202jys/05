@@ -1,31 +1,25 @@
 #include <stdio.h>
 int main() {
 
-    int n1, n2;
-    char op;
-    int result;
+    int answer=56;
+    int x;
+    int try=0;
 
-    printf("input the calculation: ");
-    scanf("%i%c%i", &n1, &op, &n2);
-
-     if(op =='+')
-        result = n1 + n2;
-    else if(op == '-')
+   do
+   {
+    printf("Guess the number: ");
+    scanf("%d", &x);
     
-        result = n1 - n2; 
+    try++;
+    
+    if (x < answer)
+        printf("Too low! Try again: ");
+    else if (x > answer)
+        printf("Too high! Try again: ");
 
-    else if(op == '*')
-  
-        result = n1 * n2;
+   } while (answer != x);
+   printf("Congratulations! The number was %d.\n try: %d", answer, try);
    
-    else if(op == '/')
-    
-        result = n1 / n2;
-else
-        printf("error\n");
-
-
-    printf("= %i\n", result);
 
     return 0;
 }
